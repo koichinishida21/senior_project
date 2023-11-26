@@ -33,7 +33,7 @@ home_header("Younglife Oxford");
             <th>Gender</th>
             <th>School</th>
             <th>Church</th>
-
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -70,7 +70,7 @@ home_header("Younglife Oxford");
                   echo "<tr>" ;
                   echo "<td>" ;
                     echo "<div class='d-flex align-items-center'>";
-                    echo    "<div class='round-button'><div class='round-button-circle'><a class='round-button'>".$row['initial']."</a></div></div>";
+                    echo    "<div class='round-button'><div class='round-button-circle'><a href='leaders_r.php?id=".urlencode($row['leaderID'])."' class='round-button'>".$row['initial']."</a></div></div>";
                     echo      "<div class='ms-3' >";
                     echo        "<p class='fw-bold mb-1' style='color: black'>".$row['fullName']."</p>";
                     echo        "<p class='fw-light fst-italic h6' style='color: black'>".$row['pos']."</p>";
@@ -80,7 +80,12 @@ home_header("Younglife Oxford");
                     echo  "<td>".$row['gender']."</td>";
                     echo  "<td>".$row['sname']."</td>";
                     echo  "<td>".$row['cname']."</td>";
+                    echo  "<td>";
 
+                    echo "<li class='list-inline-item'>";
+                    echo "<a href='leaders_r.php?id=".urlencode($row['leaderID'])."' class='btn btn-secondary bi bi-card-text' role='button' title = 'Detail'></a>";
+                    echo "</li>";
+                    echo  "</td>";
                   echo "</tr>";
                 }
                 echo "</tbody>";
@@ -118,7 +123,7 @@ home_header("Younglife Oxford");
           echo "<tr>";
           echo  "<td>";
           echo    "<div class='d-flex align-items-center'>";
-          echo    "<div class='round-button'><div class='round-button-circle'><a class='round-button'>".$row['initial']."</a></div></div>";
+          echo    "<div class='round-button'><div class='round-button-circle'><a href='leaders_r.php?id=".urlencode($row['leaderID'])."' class='round-button'>".$row['initial']."</a></div></div>";
           echo      "<div class='ms-3'>";
           echo        "<p class='fw-bold mb-1' style='color: black'>".$row['fullName']."</p>";
           echo        "<p class='fw-light fst-italic h6' style='color: black'>".$row['pos']."</p>";
@@ -128,7 +133,12 @@ home_header("Younglife Oxford");
           echo  "<td>".$row['gender']."</td>";
           echo  "<td>".$row['sname']."</td>";
           echo  "<td>".$row['cname']."</td>";
+          echo  "<td>";
 
+          echo "<li class='list-inline-item'>";
+          echo "<a href='leaders_r.php?id=".urlencode($row['leaderID'])."' class='btn btn-secondary bi bi-card-text' role='button' title = 'Detail'></a>";
+          echo "</li>";
+          echo  "</td>";
           echo "</tr>";
         }
         echo "</tbody>";
